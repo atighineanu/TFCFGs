@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir -p some-files
-echo LALALA > some-files/iaunti.txt
-echo triulealea > some-files/doi.txt
+#mkdir -p some-files
+echo LALALA 
+echo triulealea #> some-files/doi.txt
