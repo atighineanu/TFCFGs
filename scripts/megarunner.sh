@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #mkdir -p some-files
 echo LALALA 
