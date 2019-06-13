@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo LALALA >> iaunti.txt
-echo triulealea >> doi.txt
+echo LALALA >> some-files/iaunti.txt
+echo triulealea >> some-files/doi.txt

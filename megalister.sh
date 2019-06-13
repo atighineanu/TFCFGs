@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls -alh
+ls -alh some-files
