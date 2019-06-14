@@ -6,3 +6,5 @@ cp some-files/terraform.tfstate /app/caasp-openstack-terraform/terraform.tfstate
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -dis
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ar $1
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "zypper -n --gpg-auto-import-keys ref"
+/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "echo \"ZYPPER_AUTO_IMPORT_KEYS=1\" >> /etc/transactional-update.conf"
+/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -sysupd
