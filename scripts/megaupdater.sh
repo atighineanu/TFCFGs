@@ -11,3 +11,4 @@ ls -alh some-files
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "zypper -n --gpg-auto-import-keys ref"
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "echo \"ZYPPER_AUTO_IMPORT_KEYS=1\" >> /etc/transactional-update.conf"
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -sysupd
+/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -uiupd
