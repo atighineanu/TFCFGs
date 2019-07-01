@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 ln -s /usr/bin/chromedriver /usr/sbin/chromedriver
 cp some-files/caasp-cluster.tf /app/caasp-openstack-terraform/caasp-cluster.tf
 cp some-files/terraform.tfvars /app/caasp-openstack-terraform/terraform.tfvars
