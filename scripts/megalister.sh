@@ -5,6 +5,7 @@ find some-files
 find /app
 
 ln -s /usr/bin/chromedriver /usr/sbin/chromedriver
+mkdir -p /app/caasp-openstack-terraform/ssh/
 cp some-files/id_caasp /app/caasp-openstack-terraform/ssh/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/ssh/id_caasp
 cp some-files/caasp-cluster.tf /app/caasp-openstack-terraform/caasp-cluster.tf
