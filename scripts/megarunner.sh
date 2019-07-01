@@ -5,6 +5,8 @@ function copy_some_files {
 	cp /app/caasp-openstack-terraform/terraform.tfstate some-files/terraform.tfstate
 	cp /app/caasp-openstack-terraform/ssh/id_caasp some-files/id_caasp
 	cat /app/caasp-openstack-terraform/terraform.tfstate
+	find some-files
+	find /app
 }
 
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform init"
