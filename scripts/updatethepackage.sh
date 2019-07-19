@@ -6,7 +6,7 @@ cp some-files/id_caasp /app/caasp-openstack-terraform/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/id_caasp
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -dis
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ar $1
-/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "zypper -n --gpg-auto-import-keys ref"
-/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -sysupd
+/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "zypper --no-gpg-checks ref"
+/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "transactional-update reboot pkg install -y $2"
 sleep 10
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -uiupd
