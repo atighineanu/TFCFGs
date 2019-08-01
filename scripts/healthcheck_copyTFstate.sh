@@ -7,7 +7,5 @@ cp some-files/id_caasp /app/caasp-openstack-terraform/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/id_caasp
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -test health
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "rpm -qi $1"
-echo "---begin---"
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform output -json"
-echo "---end---"
 #exec /usr/sbin/httpd -D FOREGROUND -f /etc/apache2/httpd.conf
