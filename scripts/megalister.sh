@@ -11,4 +11,3 @@ cp /app/caasp-openstack-terraform/caasp-cluster.tf other-files/caasp-cluster.tf
 cp /app/caasp-openstack-terraform/terraform.tfvars other-files/terraform.tfvars
 cp /app/caasp-openstack-terraform/terraform.tfstate other-files/terraform.tfstate
 cp /app/caasp-openstack-terraform/ssh/id_caasp other-files/id_caasp
-
