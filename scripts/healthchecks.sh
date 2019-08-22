@@ -7,3 +7,8 @@ chmod 0500 /app/caasp-openstack-terraform/id_caasp
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -test health
 
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "rpm -qi $1"
+
+cp /app/caasp-openstack-terraform/caasp-cluster.tf other-files/caasp-cluster.tf 
+cp /app/caasp-openstack-terraform/terraform.tfvars other-files/terraform.tfvars
+cp /app/caasp-openstack-terraform/terraform.tfstate other-files/terraform.tfstate
+cp /app/caasp-openstack-terraform/id_caasp other-files/id_caasp
