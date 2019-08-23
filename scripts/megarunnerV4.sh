@@ -1,5 +1,6 @@
 #!/bin/sh
-/root/go/src/mkcaasp/main -v 4 -createcaasp -action apply -nodes w3m1
+/root/go/src/mkcaasp/main -v 4 -createcaasp -action init -rpm
+/root/go/src/mkcaasp/main -v 4 -createcaasp -action apply -nodes w3m1 -rpm
 #/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -createcaasp -action apply
 echo "---end---"
 #/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform output" > some-files/out.json
