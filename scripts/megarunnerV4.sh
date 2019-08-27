@@ -1,4 +1,6 @@
 #!/bin/sh
+eval $(ssh-agent)
+ssh-add ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action init -rpm
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action apply -nodes w3m1 -rpm
 #/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -createcaasp -action apply
