@@ -12,6 +12,12 @@ sleep 70
 /root/go/src/mkcaasp/main -v 4 -rpm -status
 sleep 70
 /root/go/src/mkcaasp/main -v 4 -rpm -status
+sleep 3
+kubectl get nodes
+sleep 3
+kubectl get services
+sleep 10
+/root/go/src/mkcaasp/main -v 4 -rpm -diagn
 #/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -createcaasp -action apply
 echo "---end---"
 #/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform output" > some-files/out.json
