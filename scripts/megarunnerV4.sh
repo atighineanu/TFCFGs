@@ -2,7 +2,7 @@
 eval $(ssh-agent)
 ssh-add ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action init -rpm
-/root/go/src/mkcaasp/main -v 4 -createcaasp -action apply -nodes w1m1 -rpm -bootstrap
+/root/go/src/mkcaasp/main -v 4 -createcaasp -action apply -nodes w1m3 -rpm -bootstrap
 /root/go/src/mkcaasp/main -v 4 -status
 sleep 10
 /root/go/src/mkcaasp/main -v 4 -rpm -reboot masters
