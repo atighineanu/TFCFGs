@@ -4,6 +4,6 @@ cp -r some-files/imba-cluster /root/go/src/mkcaasp/tests/ginkgoscenarios/scenari
 
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
-/root/go/src/mkcaasp/main -v 4 -createcaasp -action init
+/root/go/src/mkcaasp/main -v 4 -createcaasp -rpm -action init
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action refresh -nodes w1m3 -rpm -bootstrap
 cp -r /usr/share/caasp/terraform/vmware/* other-files/
