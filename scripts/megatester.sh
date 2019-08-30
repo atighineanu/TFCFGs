@@ -2,6 +2,8 @@
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
+/root/go/src/mkcaasp/main -v 4 -rpm -createcaasp -action init
+/root/go/src/mkcaasp/main -v 4 -rpm -createcaasp -action refresh
 /root/go/src/mkcaasp/main -v 4 -rpm -status
 sleep 2
 kubectl get nodes
