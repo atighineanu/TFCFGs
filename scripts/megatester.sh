@@ -1,7 +1,7 @@
 #!/bin/sh
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
 cp -r some-files/imba-cluster /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/
-mkdir -p
+mkdir -p .kube/config
 cp /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/imba-cluster/admin.conf .kube/config
 
 eval $(ssh-agent)
