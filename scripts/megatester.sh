@@ -16,5 +16,8 @@ kubectl get services
 sleep 2
 /root/go/src/mkcaasp/main -v 4 -rpm -reboot masters
 sleep 2
+sleep 100
+/root/go/src/mkcaasp/main -v 4 -rpm -status
 /root/go/src/mkcaasp/main -v 4 -rpm -diagn
+/root/go/src/mkcaasp/main -v 4 -rpm -proto workers
 cp -r /usr/share/caasp/terraform/vmware/* other-files/

@@ -1,6 +1,5 @@
 #!/bin/sh
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
-cp -r some-files/imba-cluster /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/
 
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
