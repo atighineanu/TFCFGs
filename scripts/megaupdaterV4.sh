@@ -5,15 +5,15 @@ mkdir -p .kube/config
 cp /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/imba-cluster/admin.conf .kube/config
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
-/root/go/src/mkcaasp/main -v 4 -createcaasp -action init
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "zypper -ar ${1}" -masters
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "zypper -ar ${1}" -workers
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "zypper -ar ${1}" -lb
+/root/go/src/mkcaasp/main -v 4 -rpm -createcaasp -action init
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper -ar ${1}" -masters
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper -ar ${1}" -workers
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper -ar ${1}" -lb
 zypper up --auto-agree-with-licenses --no-confirm skuba
 zypper up --auto-agree-with-licenses --no-confirm
 sleep 10;
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "zypper up --auto-agree-with-licenses --no-confirm" -masters
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "zypper up --auto-agree-with-licenses --no-confirm" -workers
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm" -masters
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm" -workers
 /root/go/src/mkcaasp/main -v 4 -rpm -reboot masters
 sleep 60;
 /root/go/src/mkcaasp/main -v 4 -rpm -reboot workers
