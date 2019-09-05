@@ -12,8 +12,10 @@ ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 zypper up --auto-agree-with-licenses --no-confirm skuba
 zypper up --auto-agree-with-licenses --no-confirm
 sleep 10;
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm" -masters
-/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm" -workers
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper lr -puU" -masters
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper lr -puU" -workers
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm cri-o" -masters
+/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm cri-o" -workers
 /root/go/src/mkcaasp/main -v 4 -rpm -reboot masters
 sleep 60;
 /root/go/src/mkcaasp/main -v 4 -rpm -reboot workers
