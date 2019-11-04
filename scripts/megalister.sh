@@ -1,7 +1,11 @@
 #!/bin/sh
 ln -s /usr/bin/chromedriver /usr/sbin/chromedriver
+cp some-files/id_caasp /app/caasp-openstack-terraform/id_caasp
+chmod 0500 /app/caasp-openstack-terraform/id_caasp
 cp some-files/id_caasp /app/caasp-openstack-terraform/ssh/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/ssh/id_caasp
+eval $(ssh-agent)
+ssh-add /app/caasp-openstack-terraform/ssh/id_caasp
 cp some-files/caasp-cluster.tf /app/caasp-openstack-terraform/caasp-cluster.tf
 cp some-files/terraform.tfvars /app/caasp-openstack-terraform/terraform.tfvars
 cp some-files/terraform.tfstate /app/caasp-openstack-terraform/terraform.tfstate
