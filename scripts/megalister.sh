@@ -10,8 +10,9 @@ ssh-add /app/caasp-openstack-terraform/ssh/id_caasp
 cp some-files/caasp-cluster.tf /app/caasp-openstack-terraform/caasp-cluster.tf
 cp some-files/terraform.tfvars /app/caasp-openstack-terraform/terraform.tfvars
 cp some-files/terraform.tfstate /app/caasp-openstack-terraform/terraform.tfstate
-/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform refresh"
-/app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -caaspuiinst
+go run caasp/main.go -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform refresh"
+sleep 10;
+go run caasp/main.go -repo /app/caasp-openstack-terraform -auth openstack.json -caaspuiinst
 cp /app/caasp-openstack-terraform/caasp-cluster.tf other-files/caasp-cluster.tf
 cp /app/caasp-openstack-terraform/terraform.tfvars other-files/terraform.tfvars
 cp /app/caasp-openstack-terraform/terraform.tfstate other-files/terraform.tfstate
