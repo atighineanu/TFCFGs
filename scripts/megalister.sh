@@ -4,6 +4,7 @@ cp some-files/id_caasp /app/caasp-openstack-terraform/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/id_caasp
 cp some-files/id_caasp /app/caasp-openstack-terraform/ssh/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/ssh/id_caasp
+sleep 60;
 eval $(ssh-agent)
 ssh-add /app/caasp-openstack-terraform/ssh/id_caasp
 cp some-files/caasp-cluster.tf /app/caasp-openstack-terraform/caasp-cluster.tf

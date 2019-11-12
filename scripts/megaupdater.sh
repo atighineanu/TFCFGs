@@ -6,13 +6,16 @@ cp other-files/id_caasp /app/caasp-openstack-terraform/id_caasp
 cp other-files/id_caasp /app/caasp-openstack-terraform/ssh/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/id_caasp
 chmod 0500 /app/caasp-openstack-terraform/ssh/id_caasp
+sleep 60;
 eval $(ssh-agent)
 ssh-add /app/caasp-openstack-terraform/ssh/id_caasp
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -reg
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -dis
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ar $1
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "zypper -n --gpg-auto-import-keys ref"
+sleep 30
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "zypper --no-gpg-checks ref"
+sleep 30
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -cmd "echo \"ZYPPER_AUTO_IMPORT_KEYS=1\" >> /etc/transactional-update.conf"
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -sysupd
 sleep 20
