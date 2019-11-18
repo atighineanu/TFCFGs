@@ -16,6 +16,7 @@ sleep 3
 sleep 1
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
+/root/go/src/mkcaasp/main -v 4 -rpm -addnodes w1m0
 sleep 3
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo add_cluster_nodes03
 cp -r /usr/share/caasp/terraform/vmware/* other-files/
