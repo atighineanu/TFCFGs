@@ -14,6 +14,7 @@ ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 sleep 3
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo deploy01
 sleep 1
+eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 sleep 3
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo add_cluster_nodes03
