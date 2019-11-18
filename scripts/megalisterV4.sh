@@ -12,6 +12,8 @@ sleep 5
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 sleep 3
-/root/go/src/mkcaasp/main.go -v 4 -rpm -ginkgo
+/root/go/src/mkcaasp/main.go -v 4 -rpm -ginkgo deploy01
+sleep 1
+/root/go/src/mkcaasp/main.go -v 4 -rpm -ginkgo add_cluster_nodes03
 cp -r /usr/share/caasp/terraform/vmware/* other-files/
 cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/imba-cluster other-files/
