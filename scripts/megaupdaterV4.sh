@@ -27,6 +27,6 @@ sleep 90;
 /root/go/src/mkcaasp/main -v 4 -rpm -cmd "rpm -qi ${2}" -masters
 /root/go/src/mkcaasp/main -v 4 -rpm -cmd "rpm -qi ${2}" -workers
 #/root/go/src/mkcaasp/main -v 4 -rpm -cmd "rpm -qi cri-o" -lb
-/root/go/src/mkcaasp/main.go -v 4 -rpm -ginkgo check_container_versions02
+/root/go/src/mkcaasp/main -v 4 -rpm -ginkgo check_container_versions02
 cp -r /usr/share/caasp/terraform/vmware/* some-files/
 cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/imba-cluster some-files/
