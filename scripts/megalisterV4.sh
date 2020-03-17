@@ -1,6 +1,7 @@
 #!/bin/sh
 export MKCAASPROOT=/root/go/src/mkcaasp
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
+cp some-files/mkcaaspcfg.json /root/go/src/mkcaasp/
 zypper -n up skuba
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
@@ -25,5 +26,6 @@ ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 /root/go/src/mkcaasp/main -v 4 -rpm -addnodes w1m0
 sleep 10
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo add_cluster_nodes03
+cp /root/go/src/mkcaasp/mkcaaspcfg.json other-files/
 cp -r /usr/share/caasp/terraform/vmware/* other-files/
 cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster other-files/
