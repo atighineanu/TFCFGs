@@ -5,6 +5,8 @@ ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action init -rpm -vmware
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action apply -nodes w1m1 -rpm -vmware
 
+
+cp /root/go/src/mkcaasp/mkcaaspcfg.json some-files/
 cp -r /usr/share/caasp/terraform/vmware/* some-files/
 cat /usr/share/caasp/terraform/vmware/terraform.tfstate
 echo "---end---"
