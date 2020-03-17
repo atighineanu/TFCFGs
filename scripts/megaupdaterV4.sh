@@ -9,8 +9,8 @@ cp /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/imba-cluster/admin.conf 
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 /root/go/src/mkcaasp/main -v 4 -rpm -createcaasp -action init
-echo "${1}"
-echo "${2}"
+echo REPO: "${1}"
+echo PACKAGE: "${2}"
 /root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper ar ${1}" -all
 zypper up --auto-agree-with-licenses --no-confirm skuba
 zypper up --auto-agree-with-licenses --no-confirm
