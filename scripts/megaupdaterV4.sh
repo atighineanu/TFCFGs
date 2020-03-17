@@ -17,12 +17,7 @@ zypper up --auto-agree-with-licenses --no-confirm
 sleep 10;
 /root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper lr -puU" -all
 /root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper -n up" -all
-#/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm cri-o" -masters
-#/root/go/src/mkcaasp/main -v 4 -rpm -cmd "sudo zypper up --auto-agree-with-licenses --no-confirm cri-o" -workers
-/root/go/src/mkcaasp/main -v 4 -rpm -reboot masters
-sleep 90;
-/root/go/src/mkcaasp/main -v 4 -rpm -reboot workers
-sleep 90;
+sleep 3;
 /root/go/src/mkcaasp/main -v 4 -rpm -cmd "rpm -qi ${2}" -all
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo check_container_versions02
 cp -r /usr/share/caasp/terraform/vmware/* some-files/
