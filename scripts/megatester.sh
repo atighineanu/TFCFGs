@@ -1,4 +1,5 @@
 #!/bin/sh
+export MKCAASPROOT=/root/go/src/mkcaasp
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
 cp -r some-files/imba-cluster /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/
 mkdir -p .kube/config
