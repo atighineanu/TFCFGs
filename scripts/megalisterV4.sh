@@ -1,5 +1,6 @@
 #!/bin/sh
 export MKCAASPROOT=/root/go/src/mkcaasp
+export GO111MODULE=on
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
 cp some-files/mkcaaspcfg.json /root/go/src/mkcaasp/
 zypper -n up skuba
