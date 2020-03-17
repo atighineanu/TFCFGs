@@ -17,6 +17,7 @@ sleep 3
 sleep 60
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
+export GO111MOD=on
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo deploy01
 sleep 10
 eval $(ssh-agent)
