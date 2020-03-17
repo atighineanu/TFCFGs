@@ -1,5 +1,5 @@
 #!/bin/sh
-echo MKCAASPROOT=/root/go/src/mkcaasp
+export MKCAASPROOT=/root/go/src/mkcaasp
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
 zypper -n up skuba
 eval $(ssh-agent)
