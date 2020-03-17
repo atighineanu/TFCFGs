@@ -1,5 +1,6 @@
 #!/bin/sh
 export MKCAASPROOT=/root/go/src/mkcaasp
+export GO111MODULE=on
 cp other-files/mkcaaspcfg.json /root/go/src/mkcaasp/
 cp -r other-files/* /usr/share/caasp/terraform/vmware/
 cp -r other-files/imba-cluster /root/go/src/mkcaasp/tests/ginkgoscenarios/scenario1/
