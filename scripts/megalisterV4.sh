@@ -1,6 +1,5 @@
 #!/bin/sh
 export MKCAASPROOT=/root/go/src/mkcaasp
-export GO111MODULE=on
 cp -r some-files/* /usr/share/caasp/terraform/vmware/
 cp some-files/mkcaaspcfg.json /root/go/src/mkcaasp/
 zypper -n up skuba
@@ -19,7 +18,7 @@ sleep 3
 sleep 60
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
-export GO111MOD=on
+export GO111MODULE=on
 /root/go/src/mkcaasp/main -v 4 -rpm -ginkgo deploy01
 sleep 10
 eval $(ssh-agent)
