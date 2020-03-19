@@ -2,7 +2,7 @@
 export MKCAASPROOT=/root/go/src/mkcaasp
 export GO111MODULE=on
 cp other-files/mkcaaspcfg.json /root/go/src/mkcaasp/
-cp -r other-files/* /usr/share/caasp/terraform/vmware/
+cp -r other-files/* /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/
 cp -r other-files/imba-cluster /root/go/src/mkcaasp/tests/ginkgoscenarios/deploy01/
 cd /root/go/src/github.com/fgerling/bdd-poc
 git pull

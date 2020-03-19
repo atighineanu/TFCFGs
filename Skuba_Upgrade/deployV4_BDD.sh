@@ -7,6 +7,6 @@ go run /root/go/src/mkcaasp/caasp/main.go -v 4 -createcaasp -action apply -nodes
 
 
 cp /root/go/src/mkcaasp/mkcaaspcfg.json some-files/
-cp -r /usr/share/caasp/terraform/vmware/* some-files/
-cat /usr/share/caasp/terraform/vmware/terraform.tfstate
+cp -r /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/* some-files/
+cat /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/terraform.tfstate
 echo "---end---"
