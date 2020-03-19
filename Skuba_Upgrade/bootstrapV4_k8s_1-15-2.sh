@@ -18,7 +18,6 @@ eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 export GO111MODULE=on
 go run caasp/main.go -v 4 -k8sversion 1.15.2 -ginkgo deploy01
-sleep 1
 cp /root/go/src/mkcaasp/mkcaaspcfg.json other-files/
-cp -r /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/* other-files/
-cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster other-files/
+cp -r /root/go/src/github.com/SUSE/skuba/ci/infra/vmware other-files/vmware
+cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster other-files/imba-cluster
