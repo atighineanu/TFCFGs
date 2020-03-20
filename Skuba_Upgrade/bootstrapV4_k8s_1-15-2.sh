@@ -28,6 +28,6 @@ sleep 10
 godog features/skuba_upgrade/skuba_upgrade-01.feature
 sleep 30
 /root/go/src/mkcaasp/main -v 4 -createcaasp -action destroy
-cp /root/go/src/mkcaasp/mkcaaspcfg.json other-files/
-cp -r /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/* other-files/
-cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster other-files/
+#cp /root/go/src/mkcaasp/mkcaaspcfg.json other-files/
+#cp -r /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/* other-files/
+#cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster other-files/
