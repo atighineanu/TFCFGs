@@ -17,7 +17,13 @@ eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 export GO111MODULE=on
 export GOPATH=/root/go
-/root/go/src/mkcaasp/main -v 4 -k8sversion 1.15.2 -bootstrap
+/root/go/src/mkcaasp/main -v 4 -k8sversion 1.15.2 -ginkgo deploy01
+export KUBECONFIG=/root/go/src/github.com/fgerling/bdd-poc/imba-cluster/admin.conf
+cd /root/go/src/github.com/fgerling/bdd-poc
+git pull
+rm -r /root/go/src/github.com/fgerling/bdd-poc/imba-cluster
+cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster .
+godog features/skuba_upgrade/skuba_upgrade-01.feature
 cp /root/go/src/mkcaasp/mkcaaspcfg.json other-files/
 cp -r /root/go/src/github.com/SUSE/skuba/ci/infra/vmware/* other-files/
 cp -r /root/go/src/mkcaasp/tests/ginkgoscenarios/imba-cluster other-files/
