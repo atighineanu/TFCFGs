@@ -1,4 +1,6 @@
 #!/bin/sh
+zypper -n in terraform
+zypper -n up skuba
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -ostkcmd "terraform init"
 /app/mkcaasp -repo /app/caasp-openstack-terraform -auth openstack.json -createcaasp -action apply
 echo "---end---"
