@@ -4,6 +4,7 @@ cp -r some-files/* /usr/share/caasp/terraform/openstack/
 cp some-files/mkcaaspcfg.json /root/go/src/mkcaasp/
 zypper -n up skuba
 zypper -n in terraform
+/root/go/src/mkcaasp/main -v 4 -rpm -upgradetf12
 eval $(ssh-agent)
 ssh-add -k /root/go/src/mkcaasp/skuba_TF_stuff/id_shared
 /root/go/src/mkcaasp/main -v 4 -rpm -openstack -createcaasp -action init
